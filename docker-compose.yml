@@ -1,0 +1,10 @@
+services:
+  sql:
+    image: mssql/server:2022-preview-ubuntu-22.04
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
